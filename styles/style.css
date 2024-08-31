@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --primaryTextColor: #232e35; /* Untuk title atau judul */
+  --secondaryTextColor: #656d72; /* Untuk text biasa seperti paragraph contohnya */
+
+  --borderColor: #f1f1f1;
+  --lineColor: #d9d9d9; /* untuk line di pre-title */
+
+  --primaryBackgroundColor: #fff;
+  --secondaryBackgroundColor: #fbfbfb;
+  --thirdBackgroundColor: #f5f3fe;
+
+  --primaryIconColor: #7e74f1;
+  --primaryIconColorHover: #5d51e8;
+
+  --sectionPadding: 6rem 0;
+
+  --itemBorderRadius: 0.7rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--primaryTextColor);
+}
+
+p {
+  font-size: 1rem; /* 16 px */
+  line-height: 1.9rem; /*30.4 px */
+}
+
+a {
+  text-decoration: none;
+}
+
+/* End Preparation */
+
+.main-container {
+  width: 500rem;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+@media (max-width: 1600px) {
+  .main-container {
+    width: 90%;
+  }
+  #Experience{
+    margin-top: 10rem;
+  }
+  .pre-title{
+    margin-top: 10rem;
+  }
+  
+}
+
+/* Buttons */
+.btn {
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 1.5px solid var(--borderColor);
+  cursor: pointer;
+ 
+}
+
+.btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+/* Titles */
+.section-title {
+  margin: 1rem 0 4rem;
+  font-size: 2rem;
+}
+
+.dark-mode .section-title{
+  color: white;
+}
+
+.pre-title {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--secondaryTextColor);
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.pre-title::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--lineColor);
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+}
+
+/* Layouts */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* --- Logo and Navigation Menu --- */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  z-index: 9999;
+ width: 77rem !important;
+ left: 10rem;
+}
+
+
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+ 
+}
+
+nav ul li {
+display: flex;
+align-items: center;
+
+}
+
+
+nav ul li a {
+  color: inherit;
+  text-decoration: none;
+  padding: 10px;
+}
+
+
+nav ul li .btn-toggle {
+  padding: 5px 15px;
+  display: block;
+}
+
+
+nav ul li .btn-toggle {
+  padding: 5px 15px;
+  display: block;
+}
+
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff; 
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 73rem;
+  
+}
+
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+
+
+.logo a {
+  color: var(--primaryTextColor);
+}
+
+
+
+/* Burger - Save for later on video */
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+  margin: 7px;
+  transition: all 0.3s;
+  z-index: 999;
+}
+
+.dark-mode .burger div{
+  background-color: white;
+} 
+
+.burger {
+  display: none;
+  z-index: 999;
+  position: fixed;
+  top: 33px;
+  right: 35px;
+}
+
+/* Hero Section */
+#hero {
+  height: 720px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* We're not going to use automatic template columns, because we need to know when the columns is go below. So we can exchange the order of the element */
+  align-items: center;
+}
+
+.hero-name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+}
+
+.hero-name span {
+  color: var(--primaryIconColor) !important;
+}
+
+.hero-right img {
+  width: 80%;
+  transform: translateY(-20px); 
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+/* Services Section */
+#services {
+  background-color: #fbfbfb;
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+}
+
+.dark-mode #services {
+  background-color: #11141d;
+}
+.services .pre-title {
+  margin: 0 auto;
+}
+
+.services-title {
+  text-align: center;
+}
+
+.dark-mode .services-title{
+  color: white;
+}
+.service {
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: var(--itemBorderRadius);
+  box-shadow: 0 0 15px rgba(51, 50, 50, 0.5); 
+  transition: box-shadow 0.3s ease;
+  
+}
+
+.service:hover {
+  box-shadow: 0 0 25px rgba(51, 50, 50, 0.8); 
+}
+
+.dark-mode .service{
+  box-shadow: 0 0 15px rgba(144, 86, 197, 0.5); 
+  transition: box-shadow 0.3s ease;
+}
+.dark-mode .service:hover {
+  box-shadow: 0 0 30px rgba(144, 86, 197, 0.5); 
+}
+.service h1 {
+  color: black;
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.dark-mode .service h1{
+  color: white;
+  padding-bottom: 9px;
+}
+
+.service h4 {
+  margin: 1.5rem 0;
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.service-icon {
+  background: var(--thirdBackgroundColor);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
+}
+/* 
+.service-icon svg {
+  fill: var(--primaryIconColor);
+} */
+
+.service-icon {
+  background: var(--thirdBackgroundColor);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
+}
+
+/* 
+.service-icon svg {
+  fill: var(--primaryIconColor);
+} */
+
+/* Portfolios */
+#portfolios {
+  padding: var(--sectionPadding);
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Skills and Education */
+#skills {
+  padding: var(--sectionPadding);
+  background: #fbfbfb;
+  position: relative;
+  z-index: 1;
+}
+
+.dark-mode #skills{
+ background-color:  #11141d;
+}
+.education {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.education .line {
+  padding: 0 0.7rem;
+}
+
+.education .line div {
+  width: 2px;
+  height: 100%;
+  background: var(--borderColor);
+  position: relative;
+}
+
+.education-info p {
+  margin: 0.6rem 0 1.4rem;
+}
+
+.education-years {
+  margin-bottom: 3rem;
+}
+
+.dark-mode .education-info h4{
+color: white;
+}
+
+.dark-mode .education-info p{
+  color: white;
+}
+
+/* The dot on the line */
+.education .line div:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: var(--borderColor);
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+}
+
+/* Right side of Skills */
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1.5rem;
+}
+
+.skills-right ul {
+  line-height: 2rem;
+  padding: 0 1rem;
+}
+
+/* Footer Section */
+footer {
+  padding: 4rem 0;
+  background: #ececec;
+  text-align: center;
+}
+.dark-mode footer{
+  background: #1a1e2c;
+}
+.footer-icons {
+  margin-bottom: 1rem;
+}
+
+.footer-icons a {
+  margin: 0 0.5rem;
+}
+
+.footer-icons svg {
+  fill: #3e3f40;
+}
+
+.dark-mode .footer-icons svg {
+  fill: #76787a;
+}
+
+.footer-icons a:hover svg {
+  fill: #000;
+}
+
+.dark-mode .footer-icons a:hover svg {
+  fill: #494848;
+}
+

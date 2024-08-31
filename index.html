@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+    <script src="https://kit.fontawesome.com/f3aa134987.js" crossorigin="anonymous"></script>
+    <title>Tia Mustika Ramadhani - Software Engineer</title>
+    <style>
+ 
+.dark-mode {
+    background-color: #11141d;
+    color: #ffffff;
+}
+
+.dark-mode nav {
+    background-color: #11141d; /* Navbar background color in dark mode */
+}
+
+.dark-mode nav ul li a, 
+.dark-mode nav ul li .btn {
+    color: #ffffff; /* Navbar text color in dark mode */
+    background-color: transparent;
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: transparent; /* Sama dengan navbar lainnya */
+    color: inherit; /* Warna mengikuti mode */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn-toggle {
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn-toggle.light-mode {
+    color: #000;
+}
+
+
+#modeToggle {
+    background-color: transparent; /* Menghapus background color di tombol */
+    border: none; /* Opsional, untuk menghapus border jika ada */
+    padding: 0; /* Opsional, untuk menghapus padding jika diperlukan */
+}
+
+#modeToggle svg {
+    fill: currentColor; /* Mengatur warna isi SVG sesuai dengan warna teks saat ini */
+    background-color: transparent; /* Pastikan tidak ada background color */
+}
+
+body.dark-mode #modeToggle svg {
+    fill: #ffffff; /* Ubah warna ikon di dark mode jika diperlukan */
+}
+
+body.light-mode #modeToggle svg {
+    fill: #000000; /* Ubah warna ikon di light mode jika diperlukan */
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    25% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.6;
+    }
+    75% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.heartbeat {
+    animation: heartbeat 1.5s infinite;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Mode Gelap */
+.dark-mode .sticky-nav {
+     background-color: #11141d; /*Warna background saat sticky di mode gelap */
+    color: #ffffff; /* Warna teks saat sticky di mode gelap */
+}
+
+
+.dark-mode .hero-name  {
+  color: white;
+}
+
+.dark-mode .pre-title{
+  color: rgb(201, 195, 195);
+}
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.dark-mode .tech-item{
+  color: white;
+  background-color: #2d2d44;
+}
+.tech-item {
+  color: #000000;
+  padding: 15px 20px; /* Increased padding for more height */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px; /* Ensures items are wide enough */
+  max-height: 50px; /* Ensures items are tall enough */
+}
+.tech-item i {
+  margin-right: 8px;
+}
+.centered {
+  display: flex;
+ gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  grid-column: 2;  /* Positions the item in the center column */
+}
+
+.dark-mode .tech-item:hover {
+  background-color: #3f3f5f;
+}
+
+.tech-item:hover {
+  background-color: #d4d2d2;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.tech-item img {
+  margin-right: 8px;
+}
+
+/* CSS */
+@media only screen and (max-width: 600px) {
+  .grid-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .service {
+    width: 100%;
+  }
+
+  .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tech-item {
+    flex: 1 1 calc(50% - 10px);
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .grid-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .service {
+    width: 100%;
+  }
+
+  .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tech-item {
+    flex: 1 1 calc(50% - 10px);
+    text-align: center;
+  }
+}
+
+/* CSS untuk Bagian Portofolio */
+.portfolios {
+  padding: 60px 0;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.pre-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #777;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+
+.portfolio {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(51, 50, 50, 0.5); 
+  transition: transform 0.3s ease;
+}
+
+.portfolio:hover {
+  transform: translateY(-10px);
+}
+
+.portfolio:hover{
+  box-shadow: 0 0 15px rgba(51, 50, 50, 0.8); 
+}
+
+
+.dark-mode .portfolio{
+  box-shadow: 0 0 15px rgba(144, 86, 197, 0.5); 
+}
+
+.dark-mode .portfolio:hover{
+  box-shadow: 0 0 30px rgba(144, 86, 197, 0.5); 
+}
+
+.portfolio-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-info {
+  padding: 20px;
+}
+
+.portfolio-title h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.portfolio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.portfolio-tags div {
+  background-color: #e5e5e5;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.portfolio-info p {
+  font-size: 16px;
+  color: #9b9999;
+  line-height: 1.6;
+}
+
+.dark-mode .portfolio {
+background-color: #202030;
+}
+.dark-mode .portfolio-tags div{
+  background-color: #3f3f5f;
+}
+
+.dark-mode .portfolio-tags div{
+  color: #fff;
+}
+
+.dark-mode .portfolio-title h4{
+  color: white;
+}
+
+.portfolio-contributors {
+  display: flex;
+  margin-top: 10px;
+}
+
+.portfolio-contributors img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+  border: 2px solid #fff;
+}
+
+.dark-mode .portfolio-contributors img {
+  border: 2px solid #3f3f5f;
+}
+
+.dark-mode #hero p{
+color: white;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+@media (max-width: 912px), (max-width: 500px), (max-width: 450px) {
+  .grid-3 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 500px){
+ .hero-right img{
+  transform: translateY(70px); 
+ }
+ .hero-left{
+  transform: translateY(90px); 
+ }
+
+.services{
+  transform: translateY(90px); 
+}
+
+#Experience{
+  margin-top: 10rem;
+}
+
+.nav .logo{
+  display: none;
+}
+
+#portfolios{
+  margin-top: 10rem;
+}
+
+}
+
+
+    </style>
+  </head>
+  <body  class="dark-mode">
+    <!-- Header -->
+    <header>
+      <div class="main-container">
+        <div class="gatau">
+          <div class="nav sticky-nav">
+            <div class="logo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-code-slash heartbeat" viewBox="0 0 16 16">
+                <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0"/>
+              </svg>
+            </div>
+  
+            <nav>
+              <ul>
+                <li><a href="#services">Skills</a></li>
+                <li><a href="#Experience">Experience</a></li>
+                <li><a href="#portfolios">Portfolio</a></li>
+                <li><a href="#skills">Education</a></li>
+                <li>
+                  <a href="/Tia mustika ramadhani - web developer-1.pdf" target="_blank">
+                    <button class="btn">Resume</button>
+                  </a>
+                </li>
+                <li>
+                  <button id="modeToggle" class="btn-toggle">
+                    <svg id="darkModeIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+                      <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+                    </svg>
+                      <svg id="lightModeIcon" xmlns="http://www.w3.org/2000/svg" width="2-" height="20" fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16" style="display: none;">
+                        <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+                      </svg>
+                  </button>
+              </li>
+              
+              </ul>
+            </nav>
+  
+            <div class="burger">
+              <div class="line-1"></div>
+              <div class="line-2"></div>
+              <div class="line-3"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <section id="hero">
+          <div class="hero-left">
+            <h3 class="pre-title">My name is</h3>
+            <h1 class="hero-name">Tia Mustika<span> Ramadhani</span></h1>
+            <p>
+              Web Developer dengan pengalaman 6 bulan dalam pengembangan web menggunakan framework Laravel. Berpengalaman dalam proyek pengembangan backend yang efisien dan scalable di berbagai lingkungan. Terampil dalam PHP, MySQL, dan Laravel, serta memiliki pemahaman tentang arsitektur API dan manajemen database. Bersemangat untuk menciptakan solusi web yang optimal dan user-friendly, dengan fokus pada praktik coding terbaik, performa, dan keamanan aplikasi.
+            </p>
+          </div>
+    
+          <div class="hero-right">
+            <img src="./images/Desain_tanpa_judul__3_-removebg-preview.png"  alt="Person Standing" />
+          </div>
+        </section>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Skils -->
+    <section id="services">
+      <div class="services main-container">
+        <h3 class="pre-title">Skills</h3>
+        <h5 class="section-title services-title">My Skills</h1>
+    
+        <div class="grid-2">
+          <div class="service">
+            <h1>Frontend</h1>
+            <div class="technologies">
+              <div class="tech-item"><i class="fa-brands fa-bootstrap fa-xl" style="color: #563d7c;"></i>Bootstrap</div>
+              <div class="tech-item"><img src="images/tailwindcss-removebg-preview.png" width="28" height="18"> TailwindCSS</div>
+              <div class="tech-item"><i class="fa-brands fa-html5 fa-xl" style="color: #ff7800;"></i>HTML</div>
+            
+              <div class="tech-item"><i class="fa-brands fa-css3-alt fa-xl" style="color: #1c71d8;"></i>CSS</div>
+              <div class="tech-item"><i class="fa-brands fa-js fa-xl" style="color: #FFD43B;"></i>JavaScript</div>
+            
+            </div>
+          </div>
+    
+          <div class="service">
+            <h1>Backend</h1>
+            <div class="technologies">
+              <div class="tech-item"><i class="fa-brands fa-laravel fa-xl" style="color: #fb503b;"></i>Laravel</div>
+              <div class="tech-item"><i class="fa-brands fa-php fa-xl" style="color: #31528c;"></i>PHP</div> 
+              <div class="tech-item"><img src="images/mysql.png" width="50" height="30" style="padding-bottom: 5px;"> MySQL</div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- End skils -->
+
+
+     <!-- Experience -->
+     <section id="Experience">
+      <div class="services main-container ">
+        <h3 class="pre-title">Experience</h3>
+        <h5 class="section-title services-title">My Experience</h1>
+          <div class="skills-grid">
+            <div class="skills-left">
+              <div class="education">
+                <div class="line">
+                  <div></div>
+                </div>
+                <div class="education-info">
+                  <!-- <div class="csg"><img src="images/Screenshot_from_2024-08-30_20-10-44-removebg-preview.png" alt=""></div> -->
+                  <h4 class="education-title">PT Cipta Sukses Globalindo</h4>
+                  <p>Web Developer</p>
+                  <p>Sistem manajemen hubungan pelanggan (Customer Relationship Management) yang bertujuan untuk membantu perusahaan dalam mengelola interaksi dengan pelanggan dan prospek. Proyek ini melibatkan beberapa teknologi yang telah saya kuasai, seperti PHP dengan framework Laravel untuk backend dan TailwindCSS untuk frontend serta databasenya menggunakan Mysql.
+
+                    Sidebar Menu: Terletak di sisi kiri, berisi navigasi utama seperti Dashboard, Order, Products, Customer, dan Services. Masing-masing menu dilengkapi ikon intuitif.
+                    
+                    Header Section: Terdapat sambutan "Hai admin" dan ikon pengaturan dark mode.
+                    
+                    Main Dashboard: Grafik Statistik: Menampilkan Total Penjualan 1 Bulan (261.000), Penjualan Harian (70.000), Customer Baru (8), dan Customer Lama (12). Memberikan gambaran cepat performa bisnis.
+                    
+                    Diagram Penjualan: Menampilkan kenaikan penjualan per bulan dari Januari hingga Desember, membantu menganalisis tren penjualan.</p>
+                  <h4 class="education-years">Maret 2024 - Juli 2024</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+       
+      </div>
+    </section>
+    
+    <!-- End skils -->
+
+
+    <!-- Portfolios -->
+    <section id="portfolios">
+      <div class="portfolios main-container">
+        <h3 class="pre-title">My Portofolio</h3>
+        <h1 class="section-title">Featured Portfolios</h1>
+        <div class="grid-3">
+          <!-- Portfolio 1 -->
+          <div class="portfolio">
+            <div class="portfolio-cover">
+              <img
+                src="./images/portfolios/web-batik.png"
+                alt="Portfolio 1"
+              />
+            </div>
+            <div class="portfolio-info">
+              <div class="portfolio-title">
+                <h4>Batik Website</h4>
+               
+              </div>
+              <div class="portfolio-tags">
+                <div>Html</div>
+                <div>Tailwindcss</div>
+              </div>
+              <p>
+                Website Forkawarrior mempromosikan budaya Indonesia melalui batik. Situs ini mengajak pengunjung untuk menghargai batik sebagai simbol seni dan tradisi, menawarkan informasi tentang sejarah, makna, filosofi, teknik pembuatan, ragam, dan penggunaan batik.
+              </p>
+              <!-- <div class="portfolio-contributors">
+                <img src="images/DSC04657.JPG" alt="Contributor 1" />
+                <img src="contributor2.jpg" alt="Contributor 2" />
+              </div> -->
+            </div>
+          </div>
+
+          <!-- Portfolio 2 -->
+          <div class="portfolio">
+            <div class="portfolio-cover">
+              <img
+                src="./images/portfolios/crm-light.png"
+                alt="Portfolio 1"
+              />
+            </div>
+            <div class="portfolio-info">
+              <div class="portfolio-title">
+                <h4>Dashboard CRM</h4>
+               
+              </div>
+              <div class="portfolio-tags">
+                <div>PHP</div>
+                <div>Laravel</div>
+                <div>Mysql</div>
+                <div>Tailwindcss</div>
+              </div>
+              <p>
+                Dashboard CRM ini adalah antarmuka yang dirancang untuk memudahkan pengelolaan dan analisis data bisnis, dengan fitur utama seperti laporan penjualan harian dan bulanan, manajemen produk dan pelanggan, serta diagram visual kenaikan penjualan bulanan.
+
+              </p>
+            </div>
+          </div>
+
+          <!-- Portfolio 3 -->
+          <div class="portfolio">
+            <div class="portfolio-cover">
+              <img
+                src="./images/portfolios/ship-alert.png"
+                alt="Portfolio 1"
+              />
+            </div>
+            <div class="portfolio-info">
+              <div class="portfolio-title">
+                <h4>Dashboard Pemantauan Cuaca Kecelakaan kapal</h4>
+               
+              </div>
+              <div class="portfolio-tags">
+                <div>PHP</div>
+                <div>Laravel</div>
+                <div>Bootstrap</div>
+                <div>API</div>
+                <div>CSS</div>
+              </div>
+              <p>
+                Menampilkan peta yang menunjukkan lokasi kapal secara real-time, serta statistik ringkas seperti jumlah kapal aktif dan pengiriman yang dipantau. Terdapat juga log peringatan terbaru yang berisi informasi mengenai potensi bahaya, lengkap dengan detail seperti longitud, latitud, dan waktu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Portfolios -->
+
+    <!-- Skills & Education -->
+    <section id="skills">
+      <div class="skills main-container">
+        <h3 class="pre-title">Education</h3>
+        <h1 class="section-title">Education</h1>
+        <div class="skills-grid">
+          <div class="skills-left">
+            <div class="education">
+              <div class="line">
+                <div></div>
+              </div>
+              <div class="education-info">
+                <h4 class="education-title">SMK LETRIS INDONESIA 2</h4>
+                <p>Rekayasa Perangkat Lunak</p>
+                <p>Selama saya di SMK jurusan Rekayasa Perangkat Lunak, saya banyak belajar berbagai hal teknis yang esensial dalam pengembangan perangkat lunak. Mata pelajaran yang saya pelajari meliputi pemrograman berbasis web dengan bahasa pemrograman seperti JavaScript dan PHP, serta pemrograman berbasis objek menggunakan Java. Selain itu, saya juga mendalami pengelolaan basis data dengan MySQL, pengelolaan berbagai diagram seperti activity diagram, dan memahami siklus pengembangan perangkat lunak melalui analisis sistem dan manajemen proyek IT. Pelajaran ini memberikan saya fondasi yang kuat dalam pengembangan perangkat lunak dan kesiapan untuk menghadapi tantangan di dunia kerja.</p>
+                <h4 class="education-years">2020 - 2023</h4>
+              </div>
+            </div>
+            <div class="education">
+              <div class="line">
+                <div></div>
+              </div>
+              <div class="education-info">
+                <h4 class="education-title">Universitas Pembangunan Jaya</h4>
+                <p>Undergraduate Informatika </p>
+                <p>Saat ini, saya berada di semester 3 dalam program studi Informatika. Pada semester 1, saya mempelajari bahasa pemrograman C, berpartisipasi dalam lomba web design, dan menjadi peserta dalam sesi presentasi oral pada konferensi Labma Scientific Fair 2023 yang diselenggarakan di Universitas Islam Indonesia, Yogyakarta, dengan tema "Kreativitas Generasi Z dalam Menyikapi Tantangan dan Mengoptimalkan Peluang untuk Mewujudkan Target Indonesia Emas 2045." Di semester 2, saya mempelajari Struktur Data, yang mengajarkan algoritma dalam pemrograman komputer dan sangat melatih logika. Saya juga aktif mengikuti seminar-seminar teknologi di kampus dan kembali mengikuti lomba web design. Selain itu, saya turut serta dalam Program Kreativitas Mahasiswa bidang Karsa Cipta, di mana kelompok kami berhasil mendapatkan hibah dari Direktorat Jenderal Pendidikan Tinggi, Riset, dan Teknologi. Saya juga telah menyelesaikan magang remote selama 4 bulan sebagai web developer.</p>
+                <h4 class="education-years">2023 - 2027</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Skills & Education  -->
+
+
+    <!-- Fomter -->
+    <footer>
+      <div class="footer-icons">
+        <a href="https://www.instagram.com/mus.ssh/">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+            />
+          </svg>
+        </a>
+
+        <a href="https://www.linkedin.com/in/tia-06a8b5257/">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+            />
+          </svg>
+        </a>
+
+        <a href="https://github.com/timusss0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+            />
+          </svg>
+        </a>
+      </div>
+      <p>&#169; 2024 - Made by Tia mustika ramadhani</p>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="js/main.js"></script>
+    <script>
+   document.addEventListener('DOMContentLoaded', function() {
+    const modeToggleBtn = document.getElementById('modeToggle');
+    const body = document.body;
+    const darkModeIcon = document.getElementById('darkModeIcon');
+    const lightModeIcon = document.getElementById('lightModeIcon');
+
+    // Cek tema yang disimpan di localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+        body.classList.remove('light-mode');
+        darkModeIcon.style.display = 'none';
+        lightModeIcon.style.display = 'block';
+    } else {
+        body.classList.add('light-mode');
+        body.classList.remove('dark-mode');
+        darkModeIcon.style.display = 'block';
+        lightModeIcon.style.display = 'none';
+    }
+
+    modeToggleBtn.addEventListener('click', function () {
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+
+        if (body.classList.contains('dark-mode')) {
+            darkModeIcon.style.display = 'none';
+            lightModeIcon.style.display = 'block';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            darkModeIcon.style.display = 'block';
+            lightModeIcon.style.display = 'none';
+            localStorage.setItem('theme', 'light');
+        }
+    });
+});
+
+
+
+  </script>
+  </body>
+</html>
