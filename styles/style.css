@@ -125,12 +125,10 @@ a {
 
 /* --- Logo and Navigation Menu --- */
 .nav {
-  display: flex;
   justify-content: space-between;
-  padding: 1rem 0;
-  z-index: 9999;
- width: 77rem !important;
- left: 10rem;
+  padding: 15px 100px;
+  z-index: 999;
+  width: 100%;
 }
 
 
@@ -174,14 +172,10 @@ nav ul li .btn-toggle {
 .sticky-nav {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
   background-color: #fff; 
-  padding: 10px 0;
   position: fixed;
-  top: 0;
   display: flex;
-  width: 73rem;
-  
 }
 
 
@@ -208,7 +202,7 @@ nav ul li .btn-toggle {
   background-color: #000;
   margin: 7px;
   transition: all 0.3s;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .dark-mode .burger div{
@@ -217,7 +211,7 @@ nav ul li .btn-toggle {
 
 .burger {
   display: none;
-  z-index: 999;
+  z-index: 9999;
   position: fixed;
   top: 33px;
   right: 35px;
