@@ -30,16 +30,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong {
-  color: var(--primaryTextColor);
-}
-
 p {
   font-size: 1rem; /* 16 px */
   line-height: 1.9rem; /*30.4 px */
@@ -339,7 +329,7 @@ nav ul li .btn-toggle {
 
 
 /* Skills and Education */
-#skills {
+#education {
   padding: var(--sectionPadding);
   background: #fbfbfb;
   position: relative;
@@ -349,22 +339,57 @@ nav ul li .btn-toggle {
 .dark-mode #skills{
  background-color:  #11141d;
 }
-.education {
+.education-wrapper {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem; /* Adjusts the space between the boxes */
 }
 
-.education .line {
-  padding: 0 0.7rem;
+.education-box {
+ 
+  border-radius: 8px; /* Rounded corners */
+  padding: 1rem; /* Padding inside the box */
+  box-shadow: 0 0 15px rgba(23, 21, 26, 0.5); 
+  width: 48%; /* Adjusts the width of each box */
+  background-color: #f9f9f9; /* Light background color */
+}
+
+.dark-mode 
+.education-box {
+  box-shadow: 0 0 15px rgba(144, 86, 197, 0.5); 
+  border-radius: 8px; /* Rounded corners */
+  padding: 1rem; /* Padding inside the box */
+  width: 48%; /* Adjusts the width of each box */
+  background-color: #111a2996; /* Light background color */
+}
+
+ 
+.education-box:hover {
+  box-shadow: 0 0 27px rgba(0, 0, 0, 0.5); 
+}
+
+
+.dark-mode 
+.education-box:hover {
+  box-shadow: 0 0 27px rgba(144, 86, 197, 0.5); 
+}
+
+.education {
+  display: flex;
 }
 
 .education .line div {
   width: 2px;
   height: 100%;
-  background: var(--borderColor);
+  background: rgb(107, 107, 107);
   position: relative;
+  
 }
+.dark-mode .education .line div {
+  background: rgb(255, 255, 255);
+}
+
 
 .education-info p {
   margin: 0.6rem 0 1.4rem;
@@ -374,24 +399,29 @@ nav ul li .btn-toggle {
   margin-bottom: 3rem;
 }
 
-.dark-mode .education-info h4{
-color: white;
-}
-
-.dark-mode .education-info p{
+.dark-mode .education-info h4 {
   color: white;
 }
 
-/* The dot on the line */
+.dark-mode .education-info p {
+  color: white;
+}
+
 .education .line div:before {
   content: "";
   width: 15px;
   height: 15px;
-  background: var(--borderColor);
+  background: rgb(107, 107, 107);
   border-radius: 50%;
   position: absolute;
   left: -6px;
+  
 }
+
+.dark-mode .education .line div:before {
+  background: rgb(255, 255, 255);
+}
+
 
 /* Right side of Skills */
 .skills-list {

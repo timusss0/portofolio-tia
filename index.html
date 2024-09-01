@@ -344,6 +344,138 @@ color: white;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
+.dark-mode .web{
+  color: white;
+}
+
+/* Style for the main list */
+.custom-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style for each list item */
+.custom-list-item {
+    margin: 0.5em 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    position: relative;
+ 
+    padding-left: 1em;
+}
+
+/* Style for nested lists */
+.nested-list {
+    margin-left: 2em;
+    padding-left: 0;
+}
+
+/* Style for nested list items */
+.nested-list-item {
+    margin: 0.5em 0;
+    font-size: 1em;
+    color: #000000;
+}
+
+/* Style for sub-nested lists */
+.sub-nested-list {
+    margin-left: 2em;
+    padding-left: 0;
+}
+
+/* Style for sub-nested list items */
+.sub-nested-list-item {
+    margin: 0.5em 0;
+    font-size: 0.9em;
+    color: #000000;
+}
+
+.sub-nested-list-item li{
+  color: black;
+}
+.dark-mode .sub-nested-list-item{
+  color: white;
+}
+
+.dark-mode .nested-list-item , .sub-nested-list-item{
+  color: white;
+}
+
+.nested-list-item , .sub-nested-list-item{
+  color: rgb(0, 0, 0);
+}
+
+.education-info {
+    line-height: 1.6; /* Adjusts line spacing */
+    margin-bottom: 20px; /* Adds space after each education info section */
+}
+
+.education-info h2 {
+    margin-bottom: 0.5rem; /* Space below the job title */
+}
+
+.education-info h4.education-title {
+    margin-bottom: 0.5rem; /* Space below the company name */
+}
+
+.education-info li {
+    margin-top: 0.5rem; /* Space above each list item */
+    margin-bottom: 0.5rem; /* Space below each list item */
+    padding-left: 20px; /* Adjusts spacing from bullet points to text */
+}
+
+.education-info h4.education-years {
+    margin-top: 1rem; /* Space above the date */
+    margin-bottom: 0; /* Removes any default space below the date */
+}
+
+.logo-letris .logo-upj {
+    width: 0.5px !important; /* Adjust the size of the logo */
+    height: auto;
+    vertical-align: middle; /* Aligns the logo with the text */
+    margin-right: 10px; /* Adds space between the logo and text */
+}
+
+.hero-icons {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Jarak antar elemen */
+}
+
+.hero-icons .text {
+  font-size: 16px; /* Ukuran teks */
+  color: #000000; /* Warna teks */
+}
+
+.dark-mode 
+.hero-icons .text {
+  font-size: 16px; /* Ukuran teks */
+  color: #ffffff; /* Warna teks */
+}
+
+
+.hero-icons .arrow {
+  font-size: 18px; /* Ukuran panah */
+  color: #1f23ff; /* Warna panah */
+}
+
+.hero-icons a {
+  display: flex;
+  align-items: center;
+  color: #fff; /* Warna ikon */
+}
+.dark-mode .hero-icons a{
+  color: #ffffff; /* Warna ikon */
+
+}
+.hero-icons svg {
+  width: 20px;
+  height: 20px;
+}
+
+
 
 @media (max-width: 912px), (max-width: 500px), (max-width: 450px) {
   .grid-3 {
@@ -364,13 +496,17 @@ color: white;
   transform: translateY(90px); 
  }
 
-.services{
+.skils{
   transform: translateY(100px); 
 }
 
 #Experience{
   margin-top: 10rem;
 }
+
+.skills-grid {
+    grid-template-columns: 1fr;
+  }
 
 .nav .logo{
   display: none;
@@ -380,7 +516,11 @@ color: white;
   margin-top: 10rem;
 }
 }
-
+@media (min-width: 1200px) {
+    .skills-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns side by side */
+    }
+}
 
     </style>
   </head>
@@ -397,10 +537,10 @@ color: white;
 
         <nav>
           <ul>
-            <li><a href="#services">Skills</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#Experience">Experience</a></li>
             <li><a href="#portfolios">Portfolio</a></li>
-            <li><a href="#skills">Education</a></li>
+            <li><a href="#education">Education</a></li>
             <li>
               <a href="/Tia mustika ramadhani - web developer-1.pdf" target="_blank">
                 <button class="btn">Resume</button>
@@ -438,8 +578,55 @@ color: white;
             <h3 class="pre-title">My name is</h3>
             <h1 class="hero-name">Tia Mustika<span> Ramadhani</span></h1>
             <p>
-              Web Developer dengan pengalaman 6 bulan dalam pengembangan web menggunakan framework Laravel. Berpengalaman dalam proyek pengembangan backend yang efisien dan scalable di berbagai lingkungan. Terampil dalam PHP, MySQL, dan Laravel, serta memiliki pemahaman tentang arsitektur API dan manajemen database. Bersemangat untuk menciptakan solusi web yang optimal dan user-friendly, dengan fokus pada praktik coding terbaik, performa, dan keamanan aplikasi.
+              Saya memiliki pengalaman bekerja sebagai web developer di PT. Cipta Sukses Globalindo (CSG), di mana saya bertanggung jawab dalam pembuatan website dashboard dengan sistem manajemen hubungan pelanggan (CRM) menggunakan Laravel dan TailwindCSS. Minat dan fokus saya terletak pada backend developer.
             </p>
+
+            <div class="hero-icons">
+
+              <span class="text">LET'S CONNECT</span>
+              <span class="arrow"> &gt; </span>
+              <a href="https://www.linkedin.com/in/tia-06a8b5257/" aria-label="LinkedIn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+                  />
+                </svg>
+              </a>
+            
+              <a href="https://www.instagram.com/mus.ssh/" aria-label="Instagram">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+
+              <a href="https://github.com/timusss0" aria-label="GitHub">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                  />
+                </svg>
+              </a>
+            </div>
+            
+            
+            
           </div>
     
           <div class="hero-right">
@@ -451,7 +638,7 @@ color: white;
     <!-- End Header -->
 
     <!-- Skils -->
-    <section id="services">
+    <section id="skills">
       <div class="services main-container">
         <h3 class="pre-title">Skills</h3>
         <h5 class="section-title services-title">My Skills</h1>
@@ -497,20 +684,15 @@ color: white;
                 <div class="line">
                   <div></div>
                 </div>
-                <div class="education-info">
+                <div class="education-info" style="margin-left: 20px;">
                   <!-- <div class="csg"><img src="images/Screenshot_from_2024-08-30_20-10-44-removebg-preview.png" alt=""></div> -->
+                  <h2 style="margin-bottom: 0.5rem;">Web Developer</h2>
                   <h4 class="education-title">PT Cipta Sukses Globalindo</h4>
-                  <p>Web Developer</p>
-                  <p>Sistem manajemen hubungan pelanggan (Customer Relationship Management) yang bertujuan untuk membantu perusahaan dalam mengelola interaksi dengan pelanggan dan prospek. Proyek ini melibatkan beberapa teknologi yang telah saya kuasai, seperti PHP dengan framework Laravel untuk backend dan TailwindCSS untuk frontend serta databasenya menggunakan Mysql.
-
-                    Sidebar Menu: Terletak di sisi kiri, berisi navigasi utama seperti Dashboard, Order, Products, Customer, dan Services. Masing-masing menu dilengkapi ikon intuitif.
-                    
-                    Header Section: Terdapat sambutan "Hai admin" dan ikon pengaturan dark mode.
-                    
-                    Main Dashboard: Grafik Statistik: Menampilkan Total Penjualan 1 Bulan (261.000), Penjualan Harian (70.000), Customer Baru (8), dan Customer Lama (12). Memberikan gambaran cepat performa bisnis.
-                    
-                    Diagram Penjualan: Menampilkan kenaikan penjualan per bulan dari Januari hingga Desember, membantu menganalisis tren penjualan.</p>
-                  <h4 class="education-years">Maret 2024 - Juli 2024</h4>
+              
+                        <li style="margin-top: 0.5rem;">Melakukan operasi CRUD pada database MySQL untuk data penjualan.</li>
+                        <li style="margin-bottom: 0.5rem;">Membuat frontend dengan TailwindCSS untuk bagian dashboard dan halaman menu seperti order, customer, product, dan services.</li>
+                      
+                  <h4 class="education-years" style="margin-top: 1rem;">Maret 2024 - Juli 2024</h4>
                 </div>
               </div>
             </div>
@@ -611,38 +793,86 @@ color: white;
     </section>
     <!-- End Portfolios -->
 
-    <!-- Skills & Education -->
-    <section id="skills">
+    <!-- Education -->
+    <section id="education">
       <div class="skills main-container">
         <h3 class="pre-title">Education</h3>
         <h1 class="section-title">Education</h1>
         <div class="skills-grid">
-          <div class="skills-left">
-            <div class="education">
-              <div class="line">
-                <div></div>
-              </div>
-              <div class="education-info">
-                <h4 class="education-title">SMK LETRIS INDONESIA 2</h4>
-                <p>Rekayasa Perangkat Lunak</p>
-                <p>Selama saya di SMK jurusan Rekayasa Perangkat Lunak, saya banyak belajar berbagai hal teknis yang esensial dalam pengembangan perangkat lunak. Mata pelajaran yang saya pelajari meliputi pemrograman berbasis web dengan bahasa pemrograman seperti JavaScript dan PHP, serta pemrograman berbasis objek menggunakan Java. Selain itu, saya juga mendalami pengelolaan basis data dengan MySQL, pengelolaan berbagai diagram seperti activity diagram, dan memahami siklus pengembangan perangkat lunak melalui analisis sistem dan manajemen proyek IT. Pelajaran ini memberikan saya fondasi yang kuat dalam pengembangan perangkat lunak dan kesiapan untuk menghadapi tantangan di dunia kerja.</p>
-                <h4 class="education-years">2020 - 2023</h4>
+          <div class="education-wrapper">
+            <div class="education-box">
+              <div class="education">
+                
+                <div class="education-info">
+                  <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                    <img src="images/letris-removebg-preview.png" alt="SMK Logo" class="logo-letris" style="width: 50px; height: auto; margin-right: 10px; border-radius: 10px">
+                    <h2 style="margin: 0;">SMK LETRIS INDONESIA 2</h2>
+                </div>
+                
+                  <h4 class="education-title">Rekayasa Perangkat Lunak</h4>
+                  <p>Berikut ini adalah beberapa hal penting yang saya pelajari selama di SMK jurusan Rekayasa Perangkat Lunak (RPL):</p>
+                  <li style="margin-top: -1rem;" class="nested-list-item">Mempelajari pemrograman berbasis web menggunakan bahasa pemrograman seperti PHP dan JavaScript.</li>
+                  <li style="margin-top: 0.5rem;">Mendalami pemrograman berbasis objek dengan menggunakan bahasa Java.</li>
+                  <li style="margin-top: 0.5rem;">Menguasai pengelolaan basis data menggunakan MySQL.</li>
+                  <li style="margin-top: 0.5rem;">Mempelajari pengelolaan berbagai diagram, seperti activity diagram dan flowchart diagram.</li>
+                  <h4 class="education-years" style="margin-top: 1rem;">2020 - 2023</h4>
+                </div>
               </div>
             </div>
-            <div class="education">
-              <div class="line">
-                <div></div>
-              </div>
-              <div class="education-info">
-                <h4 class="education-title">Universitas Pembangunan Jaya</h4>
-                <p>Undergraduate Informatika </p>
-                <p>Saat ini, saya berada di semester 3 dalam program studi Informatika. Pada semester 1, saya mempelajari bahasa pemrograman C, berpartisipasi dalam lomba web design, dan menjadi peserta dalam sesi presentasi oral pada konferensi Labma Scientific Fair 2023 yang diselenggarakan di Universitas Islam Indonesia, Yogyakarta, dengan tema "Kreativitas Generasi Z dalam Menyikapi Tantangan dan Mengoptimalkan Peluang untuk Mewujudkan Target Indonesia Emas 2045." Di semester 2, saya mempelajari Struktur Data, yang mengajarkan algoritma dalam pemrograman komputer dan sangat melatih logika. Saya juga aktif mengikuti seminar-seminar teknologi di kampus dan kembali mengikuti lomba web design. Selain itu, saya turut serta dalam Program Kreativitas Mahasiswa bidang Karsa Cipta, di mana kelompok kami berhasil mendapatkan hibah dari Direktorat Jenderal Pendidikan Tinggi, Riset, dan Teknologi. Saya juga telah menyelesaikan magang remote selama 4 bulan sebagai web developer.</p>
+    
+            <div class="education-box">
+              <div class="education">
+               
+                <div class="education-info">
+                  <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                    <img src="images/upeje-removebg-preview.png" alt="UPJ Logo" class="logo-upj" style="width: 50px; height: auto; margin-right: 10px; border-radius: 10px;">
+                    <h2 style="margin: 0;">Universitas Pembangunan Jaya</h2>
+                </div>
+                  <ul class="custom-list">
+                  <li class="custom-list-item">
+                      <strong>Semester 1:</strong>
+                      <ul class="nested-list">
+                          <li class="nested-list-item">Belajar Bahasa Pemrograman C</li>
+                          <li class="nested-list-item">Berpartisipasi dalam Lomba Web Design</li>
+                          <li class="nested-list-item">Peserta Presentasi Oral pada Labma Scientific Fair 2023 di Universitas Islam Indonesia, Yogyakarta - Tema: "Kreativitas Generasi Z dalam Menyikapi Tantangan dan Mengoptimalkan Peluang untuk Mewujudkan Target Indonesia Emas 2045"</li>
+                      </ul>
+                  </li>
+                  <li class="custom-list-item">
+                      <strong>Semester 2:</strong>
+                      <ul class="nested-list">
+                          <li class="nested-list-item">Belajar Struktur Data</li>
+                          <li class="nested-list-item">Mengikuti Seminar Teknologi di Kampus</li>
+                          <li class="nested-list-item">Berpartisipasi Kembali dalam Lomba Web Design</li>
+                          <li class="nested-list-item">Berpartisipasi Sebagai Assisten Laboratorium Informatika</li>
+                          <li class="nested-list-item">Berpartisipasi dalam Program Kreativitas Mahasiswa (PKM) Bidang Karsa Cipta
+                              <ul class="sub-nested-list">
+                                  <li class="sub-nested-list-item" >Mendapat hibah dari Direktorat Jenderal Pendidikan Tinggi, Riset, dan Teknologi</li>
+                              </ul>
+                          </li>
+                          <li class="nested-list-item">Menyelesaikan Magang Remote selama 4 Bulan sebagai Web Developer</li>
+                      </ul>
+                  </li>
+                  <li class="custom-list-item">
+                      <strong>Semester 3:</strong>
+                      <ul class="nested-list">
+                        <li class="nested-list-item">Mengikuti Himpunan Mahasiswa sebagai Humas dan Marketing</li>
+                        <li class="nested-list-item">Prodi Gathering (Program Kerja dari Himpunan Mahasiswa): Bertugas sebagai PDD (Publikasi, Dokumentasi, Desain)
+                            <ul class="sub-nested-list" >
+                                <li>Peran khusus sebagai pendokumentasi di lapangan</li>
+                            </ul>
+                        </li>
+                        <li class="sub-nested-list-item" >Sedang dalam Proses Belajar dan Beraktivitas</li>
+                      </ul>
+                  </li>
+                </ul>
+
                 <h4 class="education-years">2023 - 2027</h4>
               </div>
             </div>
           </div>
         </div>
       </div>
+     </div>
     </section>
     <!-- End Skills & Education  -->
 
