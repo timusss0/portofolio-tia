@@ -442,6 +442,7 @@ color: white;
   display: flex;
   align-items: center;
   gap: 10px; /* Jarak antar elemen */
+ 
 }
 
 .hero-icons .text {
@@ -486,6 +487,7 @@ color: white;
   .portfolio {
     margin-bottom: 20px;
   }
+
 }
 
 @media (max-width: 500px){
@@ -515,11 +517,27 @@ color: white;
 #portfolios{
   margin-top: 10rem;
 }
+.education-wrapper{
+  grid-template-columns: 1fr;
+}
+.hero-icons{
+  justify-content: center;
+  margin-top: 70px;
+}
+
 }
 @media (min-width: 1200px) {
     .skills-grid {
         grid-template-columns: 1fr 1fr; /* Two columns side by side */
     }
+}
+@media (max-width: 400px),(max-width: 500px),(max-width: 300px){
+
+  #skills{
+  margin-top: 15rem;
+  }
+
+
 }
 
     </style>
