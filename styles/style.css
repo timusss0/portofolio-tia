@@ -84,6 +84,10 @@ a {
   color: white;
 }
 
+.dark-mode #education{
+  background-color: #181729;
+}
+
 .pre-title {
   text-transform: uppercase;
   letter-spacing: 0.5rem;
@@ -336,6 +340,7 @@ nav ul li .btn-toggle {
   z-index: 1;
 }
 
+
 .dark-mode #skills{
  background-color:  #11141d;
 }
@@ -344,7 +349,7 @@ nav ul li .btn-toggle {
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
   display: grid;
-  gap: 20px;
+  gap: 30px;
   margin: 30px 0;
 }
 
@@ -357,6 +362,7 @@ nav ul li .btn-toggle {
   width: fit-content; /* Adjusts the width of each box */
   height: fit-content;
   background-color: #f9f9f9; /* Light background color */
+
 }
 
 .dark-mode 
@@ -364,8 +370,10 @@ nav ul li .btn-toggle {
   box-shadow: 0 0 15px rgba(144, 86, 197, 0.5); 
   border-radius: 8px; /* Rounded corners */
   padding: 1rem; /* Padding inside the box */
-  width: 48%; /* Adjusts the width of each box */
+  width: fit-content; /* Adjusts the width of each box */
+  height: fit-content;
   background-color: #111a2996; /* Light background color */
+ 
 }
 
  
